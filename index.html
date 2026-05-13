@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="pl" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0f1c" />
+    <meta
+      name="description"
+      content="Portfolio Macieja Górskiego – studenta informatyki, aspirującego Python Developera i Administratora Sieci. Projekty Python, Linux, TCP/IP, bezpieczeństwo IT i kontakt."
+    />
+    <meta name="author" content="Maciej Górski" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:title" content="Maciej Górski | Portfolio Python & Sieci IT" />
+    <meta
+      property="og:description"
+      content="Eleganckie portfolio junior IT: Python OOP, Bash, Linux, TCP/IP, Cisco CCNA in progress, projekty aplikacyjne i infrastrukturalne."
+    />
+    <meta property="og:image" content="https://gorski-maciej.github.io/og-image.webp" />
+    <meta property="og:url" content="https://gorski-maciej.github.io" />
+    <title>Maciej Górski | Portfolio Python &amp; Sieci IT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&family=JetBrains+Mono:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "name": "Maciej Górski",
+            "jobTitle": "Student Informatyki · Python Developer · Administrator Sieci",
+            "url": "https://gorski-maciej.github.io",
+            "email": "mailto:maciejgorski978@gmail.com",
+            "telephone": "+48 514 299 431",
+            "address": { "@type": "PostalAddress", "addressCountry": "PL" },
+            "knowsLanguage": ["pl", "en"],
+            "knowsAbout": [
+              "Python", "OOP", "Bash", "Linux", "TCP/IP", "Cisco", "CCNA", "Docker", "MySQL", "Git", "IoT", "IT security"
+            ],
+            "sameAs": [
+              "https://github.com/gorski-maciej",
+              "https://www.linkedin.com/in/maciej-gorski-046176282"
+            ]
+          },
+          {
+            "@type": "ProfilePage",
+            "name": "Maciej Górski | Portfolio Python & Sieci IT",
+            "url": "https://gorski-maciej.github.io",
+            "about": { "@type": "Person", "name": "Maciej Górski" }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0a0f1c;
+        --card: #141c2e;
+        --card-rgb: 20, 28, 46;
+        --panel: #0b111e;
+        --gold: #e5b05c;
+        --gold-strong: #f1c879;
+        --blue: #60a5fa;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --soft: #64748b;
+        --border: rgba(255, 255, 255, 0.06);
+        --border-strong: rgba(229, 176, 92, 0.26);
+        --shadow-glow: 0 0 20px rgba(229, 176, 92, 0.15);
+        --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.26);
+        --radius-xl: 24px;
+        --radius-lg: 18px;
+        --container: 1200px;
+        --nav-height: 64px;
+      }
+
+      html[data-theme="light"] {
+        color-scheme: light;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --card-rgb: 255, 255, 255;
+        --panel: #f1f5f9;
+        --text: #1e293b;
+        --muted: #475569;
+        --soft: #64748b;
+        --border: rgba(15, 23, 42, 0.09);
+        --border-strong: rgba(166, 113, 27, 0.3);
+        --shadow-glow: 0 0 20px rgba(229, 176, 92, 0.18);
+        --shadow-card: 0 18px 45px rgba(15, 23, 42, 0.1);
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: calc(var(--nav-height) + 16px);
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 16% 8%, rgba(229, 176, 92, 0.11), transparent 28rem),
+          radial-gradient(circle at 86% 4%, rgba(96, 165, 250, 0.08), transparent 24rem),
+          var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: clamp(0.96rem, 0.92rem + 0.18vw, 1.045rem);
+        line-height: 1.6;
+        text-rendering: optimizeLegibility;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+      button { cursor: pointer; }
+      img, svg, canvas { display: block; max-width: 100%; }
+
+      :focus-visible {
+        outline: 3px solid rgba(229, 176, 92, 0.85);
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        z-index: 999;
+        transform: translateY(-150%);
+        border-radius: 999px;
+        background: var(--gold);
+        color: #111827;
+        padding: 0.6rem 0.9rem;
+        font-weight: 900;
+        transition: transform 180ms ease;
+      }
+
+      .skip-link:focus { transform: translateY(0); }
+      .container { width: min(var(--container), calc(100% - 2rem)); margin-inline: auto; }
+      .section { padding: 2rem 0; }
+      .section-heading { display: grid; gap: 0.65rem; margin-bottom: 1rem; }
+      .kicker {
+        margin: 0;
+        color: var(--gold);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2, h3 { line-height: 1.08; text-wrap: balance; }
+      h1 { margin-bottom: 0.75rem; font-size: clamp(2.65rem, 8.5vw, 5.8rem); font-weight: 900; letter-spacing: -0.075em; }
+      h2 { margin-bottom: 0; font-size: clamp(1.7rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.052em; }
+      h3 { margin-bottom: 0.45rem; font-size: clamp(1.08rem, 1rem + 0.55vw, 1.35rem); letter-spacing: -0.025em; }
+      .lead { max-width: 70ch; margin-bottom: 0; color: var(--muted); }
+      .accent { color: var(--gold); }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 80;
+        min-height: var(--nav-height);
+        border-bottom: 1px solid var(--border);
+        background: rgba(10, 15, 28, 0.85);
+        backdrop-filter: blur(10px);
+      }
+
+      html[data-theme="light"] .site-header { background: rgba(248, 250, 252, 0.86); }
+
+      .nav {
+        display: flex;
+        min-height: var(--nav-height);
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 0.35rem;
+      }
+
+      .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-weight: 900; letter-spacing: -0.035em; }
+      .monogram {
+        display: grid;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border: 1px solid var(--border-strong);
+        border-radius: 13px;
+        background: linear-gradient(145deg, rgba(229, 176, 92, 0.14), rgba(var(--card-rgb), 0.9));
+        color: var(--gold);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        box-shadow: var(--shadow-glow);
+      }
+
+      .nav-links { display: none; align-items: center; gap: 1.5rem; }
+      .nav-link {
+        color: var(--muted);
+        font-size: 0.92rem;
+        font-weight: 800;
+        transition: color 180ms ease;
+      }
+
+      .nav-link:hover, .nav-link:focus-visible, .nav-link.is-active { color: var(--gold); }
+      .nav-actions { display: inline-flex; align-items: center; gap: 0.5rem; }
+      .icon-button {
+        display: inline-grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        background: rgba(var(--card-rgb), 0.82);
+        color: var(--text);
+        transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+      }
+
+      .icon-button:hover, .icon-button:focus-visible { transform: translateY(-2px); border-color: var(--border-strong); color: var(--gold); }
+      .mobile-menu {
+        position: fixed;
+        inset: calc(var(--nav-height) + 0.5rem) 1rem auto 1rem;
+        z-index: 70;
+        display: grid;
+        gap: 0.35rem;
+        transform: translateY(-10px);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: var(--shadow-card);
+        padding: 0.5rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .mobile-menu.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .mobile-menu a { border-radius: 12px; color: var(--muted); font-weight: 800; padding: 0.75rem; }
+      .mobile-menu a:hover, .mobile-menu a:focus-visible { background: rgba(229, 176, 92, 0.1); color: var(--gold); }
+
+      .hero {
+        position: relative;
+        isolation: isolate;
+        min-height: 70vh;
+        overflow: hidden;
+        padding-block: 2rem;
+      }
+
+      #particle-canvas { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; opacity: 0.72; }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 8% 8% auto;
+        z-index: -1;
+        width: min(360px, 72vw);
+        height: min(360px, 72vw);
+        border-radius: 999px;
+        background: rgba(229, 176, 92, 0.09);
+        filter: blur(64px);
+      }
+
+      .hero-grid { display: grid; gap: 1rem; align-items: center; min-height: calc(70vh - 4rem); }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 0.9rem;
+        border: 1px solid var(--border-strong);
+        border-radius: 999px;
+        background: rgba(229, 176, 92, 0.08);
+        color: var(--gold);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.78rem;
+        font-weight: 800;
+        padding: 0.45rem 0.75rem;
+      }
+
+      .pulse { width: 8px; height: 8px; border-radius: 999px; background: var(--gold); box-shadow: 0 0 0 0 rgba(229, 176, 92, 0.55); animation: pulse 2.2s infinite; }
+      @keyframes pulse { 70% { box-shadow: 0 0 0 9px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+      .hero-title { max-width: 760px; margin-bottom: 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.35rem); font-weight: 800; }
+      .hero-subtitle { max-width: 720px; margin: 0.85rem 0 0; color: var(--text); font-size: clamp(1rem, 1.4vw, 1.16rem); }
+      .typed-cursor { color: var(--gold); animation: blink 1s steps(2, start) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .actions, .social-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+      .actions { margin-top: 1.25rem; }
+      .social-links { margin-top: 0.85rem; }
+      .button, .social-link {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        border-radius: 14px;
+        font-weight: 900;
+        transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+      }
+
+      .button { border: 1px solid transparent; padding: 0.72rem 1rem; }
+      .button-primary { background: var(--gold); color: #111827; box-shadow: var(--shadow-glow); }
+      .button-primary:hover, .button-primary:focus-visible { background: var(--gold-strong); transform: translateY(-2px); }
+      .button-secondary, .social-link { border: 1px solid var(--border); background: rgba(var(--card-rgb), 0.82); color: var(--text); }
+      .button-secondary:hover, .button-secondary:focus-visible, .social-link:hover, .social-link:focus-visible { transform: translateY(-2px); border-color: var(--border-strong); box-shadow: var(--shadow-card); color: var(--gold); }
+      .social-link { width: 46px; padding: 0; }
+
+      .profile-panel, .glass-card, .skill-card, .code-card, .project-card, .mini-card, .contact-card {
+        border: 1px solid var(--border);
+        background: rgba(var(--card-rgb), 0.84);
+        box-shadow: var(--shadow-card);
+        backdrop-filter: blur(14px);
+      }
+
+      .profile-panel { border-radius: var(--radius-xl); padding: 1rem; }
+      .avatar-wrap { display: grid; grid-template-columns: 84px 1fr; gap: 1rem; align-items: center; }
+      .avatar {
+        position: relative;
+        display: grid;
+        width: 84px;
+        height: 84px;
+        place-items: center;
+        border: 1px solid var(--border-strong);
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(229, 176, 92, 0.16), transparent),
+          linear-gradient(45deg, transparent 35%, rgba(96, 165, 250, 0.1) 35% 60%, transparent 60%),
+          var(--panel);
+        color: var(--gold);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.35rem;
+        font-weight: 900;
+        box-shadow: var(--shadow-glow);
+      }
+
+      .avatar::before, .avatar::after { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(229, 176, 92, 0.22); border-radius: inherit; transform: rotate(9deg); }
+      .avatar::after { inset: -8px; transform: rotate(-12deg); opacity: 0.45; }
+      .profile-panel p { margin: 0; color: var(--muted); }
+      .profile-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+      .profile-tag, .tag, .skill-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.42rem;
+        border: 1px solid var(--border-strong);
+        border-radius: 999px;
+        background: rgba(229, 176, 92, 0.08);
+        color: var(--gold);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.76rem;
+        font-weight: 800;
+        padding: 0.38rem 0.58rem;
+      }
+
+      .about-grid { display: grid; gap: 1rem; }
+      .glass-card { border-radius: var(--radius-xl); padding: 1rem; }
+      .bio p { margin-bottom: 0.75rem; color: var(--muted); }
+      .bio p:last-child { margin-bottom: 0; }
+      .facts { display: grid; gap: 0.75rem; }
+      .facts-spaced { margin-top: 1rem; }
+      .fact { display: grid; grid-template-columns: 38px 1fr; gap: 0.75rem; align-items: center; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 0.75rem; background: rgba(255, 255, 255, 0.025); }
+      .fact i { color: var(--gold); font-size: 1.1rem; }
+      .fact strong { display: block; }
+      .fact span { color: var(--muted); }
+      .timeline { display: grid; gap: 0.75rem; margin-top: 1rem; }
+      .milestone { position: relative; display: grid; gap: 0.15rem; border-left: 2px solid var(--border-strong); padding-left: 0.85rem; }
+      .milestone::before { content: ""; position: absolute; left: -6px; top: 0.45rem; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); box-shadow: var(--shadow-glow); }
+      .milestone strong { color: var(--gold); font-family: "JetBrains Mono", ui-monospace, monospace; }
+      .milestone span { color: var(--muted); }
+
+      .skills-grid { display: grid; gap: 1rem; }
+      .skill-card {
+        border-color: rgba(229, 176, 92, 0.15);
+        border-radius: var(--radius-xl);
+        padding: 1rem;
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+      }
+      .skill-card:hover, .skill-card:focus-within {
+        transform: translateY(-4px);
+        border-color: var(--border-strong);
+        box-shadow: var(--shadow-card), 0 0 25px rgba(229, 176, 92, 0.2);
+      }
+      .skill-icon {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        place-items: center;
+        margin-bottom: 0.8rem;
+        border: 1px solid var(--border-strong);
+        border-radius: 16px;
+        background: rgba(229, 176, 92, 0.08);
+        color: var(--gold);
+      }
+      .skill-icon svg { width: 22px; height: 22px; }
+      .skill-card > p { color: var(--muted); margin-bottom: 0.9rem; }
+      .skill-details {
+        display: grid;
+        gap: 0.85rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .skill-details li {
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        padding-top: 0.85rem;
+      }
+      .skill-details strong { color: var(--text); }
+      .skill-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.65rem; }
+      .skill-badge {
+        color: var(--gold);
+        background: rgba(229, 176, 92, 0.08);
+        border-color: var(--border-strong);
+        cursor: default;
+        transition: transform 180ms ease, color 180ms ease, border-color 180ms ease, background 180ms ease;
+      }
+      .skill-badge:hover, .skill-badge:focus-visible {
+        transform: translateY(-2px);
+        color: var(--gold-strong);
+        border-color: rgba(229, 176, 92, 0.45);
+        background: rgba(229, 176, 92, 0.12);
+      }
+
+      .code-card { overflow: hidden; border-radius: var(--radius-xl); background: var(--panel); box-shadow: 0 0 30px rgba(229, 176, 92, 0.08), var(--shadow-card); }
+      .terminal-bar { display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border); padding: 0.65rem 0.85rem; background: rgba(0, 0, 0, 0.16); }
+      .dot { width: 11px; height: 11px; border-radius: 999px; }
+      .red { background: #ef4444; } .yellow { background: #f59e0b; } .green { background: #22c55e; }
+      .terminal-title { margin-left: 0.45rem; color: var(--muted); font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 0.82rem; }
+      pre { margin: 0; overflow-x: auto; padding: 1rem; color: #dbeafe; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: clamp(0.78rem, 0.7rem + 0.35vw, 0.92rem); line-height: 1.65; }
+      .kw { color: var(--blue); font-weight: 800; }
+      .str { color: var(--gold); }
+      .com { color: #6b7280; font-style: italic; }
+      .fn { color: #93c5fd; }
+      .prop { color: #c4b5fd; }
+
+      .project-grid, .mini-grid { display: grid; gap: 1rem; }
+      .project-card, .mini-card { container-type: inline-size; border-radius: var(--radius-xl); padding: 1rem; transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+      .project-card:hover, .project-card:focus-within, .mini-card:hover, .mini-card:focus-within { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: var(--shadow-card), var(--shadow-glow); }
+      .project-card p, .mini-card p { color: var(--muted); margin-bottom: 0.75rem; }
+      .project-meta { display: grid; gap: 0.65rem; margin-bottom: 0.85rem; }
+      .project-icon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 16px; background: rgba(229, 176, 92, 0.09); color: var(--gold); }
+      .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.75rem 0; }
+      .project-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.85rem; }
+      .project-link { display: inline-flex; align-items: center; gap: 0.45rem; border-radius: 999px; color: var(--gold); font-weight: 900; padding: 0.45rem 0.6rem; transition: background 180ms ease, gap 180ms ease; }
+      .project-link:hover, .project-link:focus-visible { gap: 0.75rem; background: rgba(229, 176, 92, 0.09); }
+      .mini-heading { margin-top: 1.5rem; }
+      .mini-title { display: flex; align-items: center; gap: 0.55rem; }
+      .mini-title i { color: var(--gold); }
+
+      .contact-grid { display: grid; gap: 1rem; }
+      .contact-card { border-radius: var(--radius-xl); padding: 1rem; background: rgba(var(--card-rgb), 0.72); }
+      .form-grid { display: grid; gap: 0.85rem; }
+      .field { display: grid; gap: 0.35rem; }
+      label { font-weight: 800; }
+      input, textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        outline: none;
+        background: rgba(10, 15, 28, 0.58);
+        color: var(--text);
+        padding: 0.75rem 0.85rem;
+        transition: border-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      html[data-theme="light"] input, html[data-theme="light"] textarea { background: #f8fafc; }
+      textarea { min-height: 128px; resize: vertical; }
+      input:focus, textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(229, 176, 92, 0.12); }
+      .botcheck { display: none; }
+      .form-note { margin: 0; color: var(--soft); font-size: 0.88rem; }
+      .form-status { min-height: 1.4em; color: var(--gold); font-weight: 800; }
+      .contact-links { display: grid; gap: 0.7rem; margin-top: 0.9rem; }
+      .contact-link { display: grid; grid-template-columns: 34px 1fr; gap: 0.65rem; align-items: center; border: 1px solid var(--border); border-radius: 16px; padding: 0.75rem; background: rgba(255,255,255,0.025); }
+      .contact-link i { color: var(--gold); }
+      .contact-link span { color: var(--muted); overflow-wrap: anywhere; }
+
+      .footer { border-top: 1px solid var(--border); color: var(--muted); padding: 1.2rem 0; }
+      .footer-inner { display: flex; flex-direction: column; gap: 0.4rem; }
+      .reveal { transform: translateY(20px); opacity: 0; transition: transform 560ms ease, opacity 560ms ease; will-change: transform, opacity; }
+      .reveal.is-visible { transform: translateY(0); opacity: 1; }
+
+      @media (min-width: 640px) {
+        .container { width: min(var(--container), calc(100% - 3rem)); }
+        .section { padding: 3rem 0; }
+        .hero { padding-block: 3rem; }
+        .about-grid, .contact-grid { grid-template-columns: 0.86fr 1.14fr; }
+        .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .timeline { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .milestone { border-left: 0; border-top: 2px solid var(--border-strong); padding: 0.75rem 0 0; }
+        .milestone::before { left: 0; top: -6px; }
+        .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .skill-card.primary { grid-column: span 2; }
+        .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .mini-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .footer-inner { flex-direction: row; justify-content: space-between; }
+      }
+
+      @media (min-width: 1024px) {
+        .nav-links { display: flex; }
+        .menu-toggle { display: none; }
+        .hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr); }
+        .section-heading { grid-template-columns: minmax(0, 1fr) minmax(320px, 0.74fr); align-items: end; }
+        .skills-grid { grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr); }
+        .skill-card.primary { grid-column: 1; grid-row: span 2; }
+      }
+
+      @container (min-width: 360px) {
+        .project-meta { grid-template-columns: 56px 1fr; align-items: center; }
+      }
+
+      @supports (animation-timeline: view()) {
+        .reveal {
+          animation: reveal-view both;
+          animation-timeline: view();
+          animation-range: entry 10% cover 30%;
+          opacity: 1;
+          transform: none;
+        }
+        @keyframes reveal-view { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+        #particle-canvas { display: none; }
+        .reveal { transform: none; opacity: 1; will-change: auto; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+
+    <header class="site-header">
+      <nav class="container nav" aria-label="Główna nawigacja">
+        <a class="brand" href="#hero" aria-label="Maciej Górski – strona główna">
+          <span class="monogram" aria-hidden="true">MG</span>
+          <span>Maciej Górski</span>
+        </a>
+
+        <div class="nav-links" aria-label="Sekcje strony">
+          <a class="nav-link" data-section="hero" href="#hero">Start</a>
+          <a class="nav-link" data-section="about" href="#about">O mnie</a>
+          <a class="nav-link" data-section="skills" href="#skills">Umiejętności</a>
+          <a class="nav-link" data-section="code" href="#code">Kod</a>
+          <a class="nav-link" data-section="projects" href="#projects">Projekty</a>
+          <a class="nav-link" data-section="contact" href="#contact">Kontakt</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Przełącz na jasny motyw" title="Przełącz motyw">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Otwórz menu" aria-controls="mobile-menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu" aria-label="Menu mobilne">
+        <a href="#hero">Start</a>
+        <a href="#about">O mnie</a>
+        <a href="#skills">Umiejętności</a>
+        <a href="#code">Kod</a>
+        <a href="#projects">Projekty</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="eyebrow"><span class="pulse" aria-hidden="true"></span>Midnight Navy · Python · Networks</p>
+            <h1 id="hero-title">Maciej Górski</h1>
+            <p class="hero-title" aria-live="polite">
+              <span id="typed-text">Student Informatyki · Python Developer · Administrator Sieci</span><span class="typed-cursor" aria-hidden="true">_</span>
+            </p>
+            <p class="hero-subtitle">Buduję niezawodne systemy – od skryptu w Pythonie po bezpieczną architekturę sieci.</p>
+            <div class="actions" aria-label="Główne akcje">
+              <a class="button button-primary" href="#projects"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Projekty</a>
+              <a class="button button-secondary" href="#contact"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Kontakt</a>
+            </div>
+            <div class="social-links" aria-label="Profile społecznościowe">
+              <a class="social-link" href="https://github.com/gorski-maciej" target="_blank" rel="noopener noreferrer" aria-label="GitHub Macieja Górskiego"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+              <a class="social-link" href="https://www.linkedin.com/in/maciej-gorski-046176282" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Macieja Górskiego"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <aside class="profile-panel reveal" aria-label="Wizytówka kandydata">
+            <div class="avatar-wrap">
+              <div class="avatar" aria-hidden="true">MG</div>
+              <div>
+                <p class="kicker">Junior IT Specialist</p>
+                <h2>Python + sieci</h2>
+                <p>Profil łączący kod, Linux, TCP/IP i praktyczne podejście do infrastruktury.</p>
+              </div>
+            </div>
+            <div class="profile-tags">
+              <span class="profile-tag"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Polska</span>
+              <span class="profile-tag"><i class="fa-solid fa-language" aria-hidden="true"></i>PL / EN B1-B2</span>
+              <span class="profile-tag"><i class="fa-solid fa-certificate" aria-hidden="true"></i>CCNA w toku</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="kicker">O mnie</p>
+              <h2 id="about-title">Konkretny kierunek: Python, Linux i sieci.</h2>
+            </div>
+            <p class="lead">Zwarta historia rozwoju, bez pustych sloganów – nacisk na praktykę, samodzielną naukę i gotowość do pierwszych zadań komercyjnych.</p>
+          </div>
+
+          <div class="about-grid">
+            <aside class="glass-card reveal" aria-label="Awatar i kluczowe dane">
+              <div class="avatar-wrap">
+                <div class="avatar" aria-hidden="true">MG</div>
+                <div>
+                  <h3>Maciej Górski</h3>
+                  <p class="lead">Student Informatyki · Junior-ready IT</p>
+                </div>
+              </div>
+              <div class="facts facts-spaced">
+                <div class="fact"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span><strong>Lokalizacja</strong>Polska</span></div>
+                <div class="fact"><i class="fa-solid fa-language" aria-hidden="true"></i><span><strong>Języki</strong>Polski native, angielski B1/B2</span></div>
+                <div class="fact"><i class="fa-solid fa-bullseye" aria-hidden="true"></i><span><strong>Cel</strong>Python Dev / IT Support / Network Admin</span></div>
+                <div class="fact"><i class="fa-solid fa-network-wired" aria-hidden="true"></i><span><strong>Certyfikacja</strong>Cisco CCNA w trakcie</span></div>
+              </div>
+            </aside>
+
+            <article class="glass-card bio reveal">
+              <p>Jestem studentem pierwszego roku Informatyki, zafascynowanym tworzeniem wydajnych rozwiązań w Pythonie oraz projektowaniem stabilnych sieci komputerowych.</p>
+              <p>Od podstaw samodzielnie zgłębiam Linux (Debian/Ubuntu), Bash i administrację serwerami, bo chcę rozumieć nie tylko kod aplikacji, ale też środowisko, w którym działa.</p>
+              <p>Równolegle przygotowuję się do certyfikacji Cisco CCNA, aby połączyć świat programowania z infrastrukturą sieciową, adresacją, routingiem i bezpieczeństwem.</p>
+              <p>Moje podejście to ciągłe uczenie się i szukanie praktycznych zastosowań – stąd realizuję własne projekty, od aplikacji budżetowych po skrypty monitorujące.</p>
+              <p>Wierzę, że rzetelny kod i dobrze skonfigurowana sieć to fundament każdej nowoczesnej firmy.</p>
+            </article>
+          </div>
+
+          <div class="timeline reveal" aria-label="Kamienie milowe rozwoju">
+            <div class="milestone"><strong>2024</strong><span>Rozpoczęcie studiów informatycznych i systematycznej nauki Pythona.</span></div>
+            <div class="milestone"><strong>2025</strong><span>CCNA w toku: routing, switching, adresacja i podstawy bezpieczeństwa.</span></div>
+            <div class="milestone"><strong>2025</strong><span>Pierwsze aplikacje w Pythonie: OOP, JSON, algorytmy i automatyzacja.</span></div>
+            <div class="milestone"><strong>2026</strong><span>Cel: praktyki lub staż w obszarze Python, IT Support albo sieci.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="kicker">Stack techniczny</p>
+              <h2 id="skills-title">Trzy obszary kompetencji – konkretnie i praktycznie.</h2>
+            </div>
+            <p class="lead">Rozbudowana prezentacja pokazuje nie tylko nazwy technologii, ale też sposób ich użycia w projektach, administracji i diagnostyce.</p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card primary reveal">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 17l5-5-5-5" />
+                  <path d="M12 19h8" />
+                </svg>
+              </div>
+              <p class="kicker">Programowanie i narzędzia deweloperskie</p>
+              <h3>Języki &amp; Narzędzia Dev</h3>
+              <p>Piszę czysty, obiektowy kod w Pythonie i automatyzuję zadania. Znam podstawy relacyjnych baz danych i sprawnie posługuję się Gitem.</p>
+              <ul class="skill-details">
+                <li>
+                  <strong>Python:</strong> Programowanie obiektowe (OOP), tworzenie aplikacji konsolowych, obsługa API z wykorzystaniem biblioteki requests, podstawy frameworka Flask, analiza danych z Pandas.
+                  <div class="skill-list" aria-label="Technologie Python"><span class="skill-badge">Python</span><span class="skill-badge">OOP</span><span class="skill-badge">requests</span><span class="skill-badge">Flask</span><span class="skill-badge">Pandas</span></div>
+                </li>
+                <li>
+                  <strong>Bash:</strong> Pisanie skryptów automatyzujących zadania administracyjne, przetwarzanie logów, planowanie zadań w cron.
+                  <div class="skill-list" aria-label="Technologie Bash"><span class="skill-badge">Bash</span><span class="skill-badge">Automatyzacja</span><span class="skill-badge">Logi</span><span class="skill-badge">cron</span></div>
+                </li>
+                <li>
+                  <strong>SQL &amp; MySQL:</strong> Tworzenie zapytań, relacji między tabelami, podstawy optymalizacji i zarządzania bazą.
+                  <div class="skill-list" aria-label="Technologie baz danych"><span class="skill-badge">SQL</span><span class="skill-badge">MySQL</span><span class="skill-badge">Relacje</span><span class="skill-badge">Optymalizacja</span></div>
+                </li>
+                <li>
+                  <strong>Git &amp; GitHub:</strong> Praca z repozytoriami, rozwiązywanie konfliktów, tworzenie gałęzi (branch), współpraca w zespole.
+                  <div class="skill-list" aria-label="Technologie kontroli wersji"><span class="skill-badge">Git</span><span class="skill-badge">GitHub</span><span class="skill-badge">Branch</span><span class="skill-badge">Merge conflicts</span></div>
+                </li>
+                <li>
+                  <strong>Docker:</strong> Podstawy konteneryzacji, uruchamianie i zarządzanie kontenerami, tworzenie prostych plików Dockerfile i docker-compose.yml.
+                  <div class="skill-list" aria-label="Technologie konteneryzacji"><span class="skill-badge">Docker</span><span class="skill-badge">Dockerfile</span><span class="skill-badge">Docker Compose</span><span class="skill-badge">Kontenery</span></div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="7" height="6" rx="1.5" />
+                  <rect x="14" y="4" width="7" height="6" rx="1.5" />
+                  <rect x="8.5" y="15" width="7" height="6" rx="1.5" />
+                  <path d="M6.5 10v2.5H12V15" />
+                  <path d="M17.5 10v2.5H12" />
+                </svg>
+              </div>
+              <p class="kicker">Sieci i infrastruktura</p>
+              <h3>Sieci &amp; Bezpieczeństwo</h3>
+              <p>Projektuję i konfiguruję sieci w oparciu o sprzęt Cisco. Rozumiem, jak działa komunikacja od warstwy fizycznej po aplikacyjną i dbam o jej bezpieczeństwo.</p>
+              <ul class="skill-details">
+                <li><strong>Fundamenty:</strong> Model TCP/IP i OSI, adresacja IP (VLSM, podsieci), podstawy routingu statycznego i dynamicznego (RIP, OSPF).<div class="skill-list"><span class="skill-badge">TCP/IP</span><span class="skill-badge">OSI</span><span class="skill-badge">VLSM</span><span class="skill-badge">RIP</span><span class="skill-badge">OSPF</span></div></li>
+                <li><strong>Przełączanie i VLANy:</strong> Konfiguracja przełączników Cisco, sieci VLAN, trunking, Inter-VLAN routing.<div class="skill-list"><span class="skill-badge">Cisco</span><span class="skill-badge">VLAN</span><span class="skill-badge">Trunking</span><span class="skill-badge">Inter-VLAN</span></div></li>
+                <li><strong>Bezpieczeństwo sieci:</strong> Podstawy konfiguracji firewalla (iptables w Linux), listy kontroli dostępu (ACL), analiza ruchu za pomocą Wireshark.<div class="skill-list"><span class="skill-badge">iptables</span><span class="skill-badge">ACL</span><span class="skill-badge">Wireshark</span><span class="skill-badge">Firewall</span></div></li>
+                <li><strong>Praktyka:</strong> Symulacje w Cisco Packet Tracer i GNS3, przygotowanie do egzaminu CCNA.<div class="skill-list"><span class="skill-badge">Packet Tracer</span><span class="skill-badge">GNS3</span><span class="skill-badge">CCNA</span></div></li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal">
+              <div class="skill-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v5c0 4.5-2.8 8.5-7 10-4.2-1.5-7-5.5-7-10V6l7-3z" />
+                  <path d="M9 12l2 2 4-5" />
+                </svg>
+              </div>
+              <p class="kicker">Systemy operacyjne i kompetencje miękkie</p>
+              <h3>Systemy &amp; Sposób Pracy</h3>
+              <p>Swobodnie poruszam się w środowisku Linux. Szybko się uczę i lubię rozwiązywać złożone problemy techniczne.</p>
+              <ul class="skill-details">
+                <li><strong>Linux (Debian/Ubuntu):</strong> Administracja systemem z poziomu CLI, zarządzanie użytkownikami i uprawnieniami, instalacja i konfiguracja serwerów (SSH, Apache/Nginx).<div class="skill-list"><span class="skill-badge">Linux</span><span class="skill-badge">Debian</span><span class="skill-badge">Ubuntu</span><span class="skill-badge">SSH</span><span class="skill-badge">Nginx</span></div></li>
+                <li><strong>Rozwiązywanie problemów:</strong> Analityczne podejście do debugowania kodu i diagnozowania usterek sieciowych.<div class="skill-list"><span class="skill-badge">Debugging</span><span class="skill-badge">Diagnostyka</span><span class="skill-badge">Root cause</span></div></li>
+                <li><strong>Samodzielność i organizacja:</strong> Realizuję projekty od koncepcji do działającego rozwiązania.<div class="skill-list"><span class="skill-badge">Planowanie</span><span class="skill-badge">Dokumentacja</span><span class="skill-badge">Delivery</span></div></li>
+                <li><strong>Szybka adaptacja:</strong> Bieżąco śledzę nowe technologie (IoT, podstawy DevSecOps) i szybko wdrażam je w praktyce.<div class="skill-list"><span class="skill-badge">IoT</span><span class="skill-badge">DevSecOps basics</span><span class="skill-badge">Szybka nauka</span></div></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="code" aria-labelledby="code-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="kicker">Prezentacja kodu</p>
+              <h2 id="code-title">Wizytówka programisty w terminalu.</h2>
+            </div>
+            <p class="lead">Ręcznie formatowany kod Python z delikatnym podświetleniem składni – techniczny, ale czytelny element personal brandingu.</p>
+          </div>
+
+          <article class="code-card reveal" aria-label="Kod Python opisujący profil Macieja Górskiego">
+            <div class="terminal-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="terminal-title">portfolio.py</span></div>
+            <pre><code><span class="kw">class</span> <span class="fn">MaciejGorski</span>:
+    <span class="str">"""Tworzę solidny kod i bezpieczne sieci. Aspirujący Python Dev &amp; Net Admin."""</span>
+
+    <span class="kw">def</span> <span class="fn">__init__</span>(self):
+        self.<span class="prop">name</span> = <span class="str">"Maciej Górski"</span>
+        self.<span class="prop">title</span> = <span class="str">"Student Informatyki | Python Developer | Network Enthusiast"</span>
+        self.<span class="prop">education</span> = <span class="str">"Informatyka, I rok (2024–obecnie)"</span>
+        self.<span class="prop">certification_goal</span> = <span class="str">"Cisco CCNA (w trakcie)"</span>
+        self.<span class="prop">skills</span> = {
+            <span class="str">"languages"</span>: {
+                <span class="str">"Python"</span>: [<span class="str">"OOP"</span>, <span class="str">"Flask"</span>, <span class="str">"Data Analysis"</span>],
+                <span class="str">"Bash"</span>: [<span class="str">"scripting"</span>, <span class="str">"automation"</span>],
+                <span class="str">"SQL"</span>: [<span class="str">"MySQL"</span>, <span class="str">"query optimization"</span>]
+            },
+            <span class="str">"networking"</span>: [
+                <span class="str">"TCP/IP &amp; Subnetting"</span>, <span class="str">"VLANs &amp; Inter-VLAN routing"</span>,
+                <span class="str">"Routing (RIP, OSPF)"</span>, <span class="str">"Firewall (iptables)"</span>, <span class="str">"Wireshark"</span>
+            ],
+            <span class="str">"systems"</span>: [<span class="str">"Linux (Debian/Ubuntu)"</span>, <span class="str">"Git"</span>, <span class="str">"Docker"</span>]
+        }
+        self.<span class="prop">projects</span> = [
+            <span class="str">"System budżetowy z logiką OOP"</span>,
+            <span class="str">"Własna implementacja HashTable (DSA)"</span>,
+            <span class="str">"Skrypt Bash do monitorowania sieci lokalnej"</span>
+        ]
+        self.<span class="prop">soft_skills</span> = [<span class="str">"Analityczne myślenie"</span>, <span class="str">"Samodzielność"</span>, <span class="str">"Szybka nauka"</span>]
+
+    <span class="kw">def</span> <span class="fn">motto</span>(self):
+        <span class="kw">return</span> <span class="str">"Clean code + reliable networks = solid solutions"</span></code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="kicker">Portfolio / Projekty</p>
+              <h2 id="projects-title">Case studies z konkretnym celem.</h2>
+            </div>
+            <p class="lead">Projekty pokazują praktykę: logikę aplikacji, struktury danych, automatyzację i myślenie infrastrukturalne.</p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-meta"><div class="project-icon"><i class="fa-solid fa-wallet"></i></div><h3>System zarządzania budżetem domowym</h3></div>
+              <p><strong>Cel/problem:</strong> uporządkować przychody i wydatki w prostej aplikacji konsolowej z raportami miesięcznymi.</p>
+              <p><strong>Rozwiązanie:</strong> logika OOP rozdziela kategorie, operacje i raportowanie; dane mogą być zapisywane w JSON, a wynik prezentowany w czytelnej formie.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">OOP</span><span class="tag">JSON</span></div>
+              <div class="project-actions"><a class="project-link" href="https://github.com/gorski-maciej/budget-system" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a><a class="project-link" href="#"><i class="fa-solid fa-play"></i>Demo</a></div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-meta"><div class="project-icon"><i class="fa-solid fa-network-wired"></i></div><h3>Monitor sieci lokalnej w Bash</h3></div>
+              <p><strong>Cel/problem:</strong> szybko sprawdzić dostępność hostów w sieci lokalnej i zachować logi diagnostyczne.</p>
+              <p><strong>Rozwiązanie:</strong> skrypt używa ping oraz arp-scan, zapisuje wyniki do pliku i może być uruchamiany cyklicznie przez cron.</p>
+              <div class="tags"><span class="tag">Bash</span><span class="tag">Linux</span><span class="tag">cron</span></div>
+              <div class="project-actions"><a class="project-link" href="https://github.com/gorski-maciej/local-network-monitor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a><a class="project-link" href="#"><i class="fa-solid fa-file-lines"></i>Raport</a></div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-meta"><div class="project-icon"><i class="fa-solid fa-route"></i></div><h3>Symulacja routingu dynamicznego w GNS3</h3></div>
+              <p><strong>Cel/problem:</strong> zaprojektować stabilną topologię z segmentacją sieci i kontrolą ruchu między VLAN-ami.</p>
+              <p><strong>Rozwiązanie:</strong> projekt obejmuje OSPF, VLAN-y, listy ACL i dokumentację konfiguracji jako raport techniczny.</p>
+              <div class="tags"><span class="tag">GNS3</span><span class="tag">OSPF</span><span class="tag">ACL</span></div>
+              <div class="project-actions"><a class="project-link" href="https://github.com/gorski-maciej/gns3-ospf-lab" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a><a class="project-link" href="#"><i class="fa-solid fa-diagram-project"></i>Demo</a></div>
+            </article>
+          </div>
+
+          <div class="section-heading mini-heading reveal">
+            <div><p class="kicker">Mini-projekty</p><h2>Stała praktyka w mniejszych zadaniach.</h2></div>
+            <p class="lead">Krótkie narzędzia i ćwiczenia, które wzmacniają podstawy algorytmiki, automatyzacji i administracji.</p>
+          </div>
+          <div class="mini-grid">
+            <article class="mini-card reveal"><h3 class="mini-title"><i class="fa-solid fa-table-cells"></i>HashTable DSA</h3><p>Implementacja mapy klucz-wartość z obsługą kolizji i testami przypadków brzegowych.</p><a class="project-link" href="https://github.com/gorski-maciej/hashtable" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+            <article class="mini-card reveal"><h3 class="mini-title"><i class="fa-solid fa-layer-group"></i>Wieże Hanoi</h3><p>Rekurencyjne rozwiązanie klasycznego problemu z czytelnym śledzeniem kolejnych kroków.</p><a class="project-link" href="https://github.com/gorski-maciej/hanoi-towers" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+            <article class="mini-card reveal"><h3 class="mini-title"><i class="fa-solid fa-box-archive"></i>Backup &amp; log parser</h3><p>Mini-skrypty do archiwizacji katalogów i analizy prostych plików logów systemowych.</p><a class="project-link" href="https://github.com/gorski-maciej/bash-toolkit" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><p class="kicker">Kontakt</p><h2 id="contact-title">Porozmawiajmy o praktykach, stażu lub projekcie.</h2></div>
+            <p class="lead">Formularz Web3Forms jest gotowy do podłączenia po wstawieniu własnego klucza. Linki bezpośrednie działają od razu.</p>
+          </div>
+
+          <div class="contact-grid">
+            <form class="contact-card form-grid reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="TWÓJ_KLUCZ_DOSTĘPU" />
+              <input type="hidden" name="subject" value="Nowa wiadomość z portfolio Macieja Górskiego" />
+              <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" class="botcheck" aria-hidden="true" />
+              <div class="field"><label for="name">Twoje imię</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="np. Anna Kowalska" /></div>
+              <div class="field"><label for="email">Twój email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="anna@example.com" /></div>
+              <div class="field"><label for="message">Wiadomość</label><textarea id="message" name="message" required placeholder="Napisz kilka zdań o ofercie, projekcie lub stażu..."></textarea></div>
+              <p class="form-note">Przed publikacją podmień <code>TWÓJ_KLUCZ_DOSTĘPU</code> na klucz z Web3Forms.</p>
+              <button class="button button-primary" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i>Wyślij</button>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            </form>
+
+            <aside class="contact-card reveal" aria-label="Dane kontaktowe">
+              <h3>Bezpośrednie kanały</h3>
+              <p class="lead">Najchętniej odpowiadam mailowo lub przez LinkedIn. GitHub zawiera repozytoria projektowe i będzie systematycznie rozwijany.</p>
+              <div class="contact-links">
+                <a class="contact-link" href="mailto:maciejgorski978@gmail.com"><i class="fa-solid fa-envelope"></i><span><strong>Email</strong><br />maciejgorski978@gmail.com</span></a>
+                <a class="contact-link" href="tel:+48514299431"><i class="fa-solid fa-phone"></i><span><strong>Telefon</strong><br />+48 514 299 431</span></a>
+                <a class="contact-link" href="https://github.com/gorski-maciej" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><span><strong>GitHub</strong><br />github.com/gorski-maciej</span></a>
+                <a class="contact-link" href="https://www.linkedin.com/in/maciej-gorski-046176282" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span><strong>LinkedIn</strong><br />linkedin.com/in/maciej-gorski-046176282</span></a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>© 2026 Maciej Górski. Wszelkie prawa zastrzeżone.</span>
+        <span>Midnight Navy &amp; Subtle Gold · GitHub Pages ready</span>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = [...document.querySelectorAll('.nav-link')];
+        const typedText = document.getElementById('typed-text');
+        const canvas = document.getElementById('particle-canvas');
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const titleText = 'Student Informatyki · Python Developer · Administrator Sieci';
+        const sections = navLinks.map((link) => document.getElementById(link.dataset.section)).filter(Boolean);
+
+        const setTheme = (theme) => {
+          root.dataset.theme = theme;
+          localStorage.setItem('theme', theme);
+          const isDark = theme === 'dark';
+          themeToggle.setAttribute('aria-label', isDark ? 'Przełącz na jasny motyw' : 'Przełącz na ciemny motyw');
+          themeToggle.innerHTML = `<i class="fa-solid ${isDark ? 'fa-moon' : 'fa-sun'}" aria-hidden="true"></i>`;
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', isDark ? '#0a0f1c' : '#f8fafc');
+        };
+
+        const preferredTheme = () => {
+          const stored = localStorage.getItem('theme');
+          if (stored === 'dark' || stored === 'light') return stored;
+          return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        };
+
+        const toggleMenu = (force) => {
+          const open = typeof force === 'boolean' ? force : !mobileMenu.classList.contains('is-open');
+          mobileMenu.classList.toggle('is-open', open);
+          menuToggle.setAttribute('aria-expanded', String(open));
+          menuToggle.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
+        };
+
+        const typeHero = () => {
+          if (reduceMotion) {
+            typedText.textContent = titleText;
+            return;
+          }
+          typedText.textContent = '';
+          let index = 0;
+          const tick = () => {
+            typedText.textContent = titleText.slice(0, index);
+            index += 1;
+            if (index <= titleText.length) window.setTimeout(tick, 25);
+          };
+          window.setTimeout(tick, 250);
+        };
+
+        const initParticles = () => {
+          if (!canvas || reduceMotion) return;
+          const ctx = canvas.getContext('2d', { alpha: true });
+          const particles = [];
+          let width = 0;
+          let height = 0;
+          let frame = 0;
+
+          const resize = () => {
+            const rect = canvas.getBoundingClientRect();
+            const ratio = Math.min(window.devicePixelRatio || 1, 2);
+            width = rect.width;
+            height = rect.height;
+            canvas.width = Math.floor(width * ratio);
+            canvas.height = Math.floor(height * ratio);
+            ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+            const count = Math.min(58, Math.max(26, Math.floor((width * height) / 24000)));
+            particles.length = 0;
+            for (let i = 0; i < count; i += 1) {
+              particles.push({ x: Math.random() * width, y: Math.random() * height, vx: (Math.random() - 0.5) * 0.26, vy: (Math.random() - 0.5) * 0.26, r: Math.random() * 1.3 + 0.8 });
+            }
+          };
+
+          const draw = () => {
+            ctx.clearRect(0, 0, width, height);
+            const isLight = root.dataset.theme === 'light';
+            const dot = isLight ? 'rgba(166, 113, 27, 0.58)' : 'rgba(229, 176, 92, 0.68)';
+            const line = isLight ? 'rgba(166, 113, 27, 0.16)' : 'rgba(229, 176, 92, 0.16)';
+            particles.forEach((particle, index) => {
+              particle.x += particle.vx;
+              particle.y += particle.vy;
+              if (particle.x < 0 || particle.x > width) particle.vx *= -1;
+              if (particle.y < 0 || particle.y > height) particle.vy *= -1;
+              ctx.beginPath();
+              ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
+              ctx.fillStyle = dot;
+              ctx.fill();
+              for (let j = index + 1; j < particles.length; j += 1) {
+                const other = particles[j];
+                const distance = Math.hypot(particle.x - other.x, particle.y - other.y);
+                if (distance < 118) {
+                  ctx.globalAlpha = 1 - distance / 118;
+                  ctx.strokeStyle = line;
+                  ctx.lineWidth = 1;
+                  ctx.beginPath();
+                  ctx.moveTo(particle.x, particle.y);
+                  ctx.lineTo(other.x, other.y);
+                  ctx.stroke();
+                  ctx.globalAlpha = 1;
+                }
+              }
+            });
+            frame = window.requestAnimationFrame(draw);
+          };
+
+          resize();
+          draw();
+          window.addEventListener('resize', resize, { passive: true });
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) window.cancelAnimationFrame(frame);
+            else draw();
+          });
+        };
+
+        const initReveal = () => {
+          const items = document.querySelectorAll('.reveal');
+          if (!('IntersectionObserver' in window) || CSS.supports('animation-timeline: view()')) {
+            items.forEach((item) => item.classList.add('is-visible'));
+            return;
+          }
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.14 });
+          items.forEach((item) => observer.observe(item));
+        };
+
+        const initActiveNav = () => {
+          if (!('IntersectionObserver' in window)) return;
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              navLinks.forEach((link) => {
+                const active = link.dataset.section === entry.target.id;
+                link.classList.toggle('is-active', active);
+                if (active) link.setAttribute('aria-current', 'page');
+                else link.removeAttribute('aria-current');
+              });
+            });
+          }, { rootMargin: '-35% 0px -58% 0px', threshold: 0.01 });
+          sections.forEach((section) => observer.observe(section));
+        };
+
+        const initFormGuard = () => {
+          contactForm.addEventListener('submit', (event) => {
+            const key = contactForm.querySelector('input[name="access_key"]');
+            if (key.value === 'TWÓJ_KLUCZ_DOSTĘPU') {
+              event.preventDefault();
+              formStatus.textContent = 'Formularz jest gotowy – przed wysyłką wstaw własny klucz Web3Forms.';
+              key.focus();
+            }
+          });
+        };
+
+        setTheme(preferredTheme());
+        typeHero();
+        initParticles();
+        initReveal();
+        initActiveNav();
+        initFormGuard();
+
+        themeToggle.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+        menuToggle.addEventListener('click', () => toggleMenu());
+        mobileMenu.addEventListener('click', (event) => { if (event.target.closest('a')) toggleMenu(false); });
+        window.addEventListener('keydown', (event) => { if (event.key === 'Escape') toggleMenu(false); });
+      })();
+    </script>
+  </body>
+</html>
