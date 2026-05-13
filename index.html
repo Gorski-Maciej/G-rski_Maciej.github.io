@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio Macieja Górskiego — studenta informatyki, aspirującego programisty Python, specjalisty wsparcia IT i administratora sieci."
+    />
+    <title>Maciej Górski | Portfolio IT</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              graphite: {
+                950: '#070b12',
+                900: '#0d1320',
+                800: '#121b2d',
+                700: '#1c2940',
+              },
+              accent: {
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+            },
+            boxShadow: {
+              glow: '0 0 35px rgba(56, 189, 248, 0.22)',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="min-h-screen bg-graphite-950 text-slate-100 antialiased">
+    <div class="pointer-events-none fixed inset-0 overflow-hidden">
+      <div class="absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-accent-500/20 blur-3xl"></div>
+      <div class="absolute bottom-10 right-0 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(rgba(56,189,248,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(56,189,248,0.05)_1px,transparent_1px)] bg-[size:42px_42px]"></div>
+    </div>
+
+    <header class="relative z-10 border-b border-white/10 bg-graphite-950/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6 lg:px-8" aria-label="Główna nawigacja">
+        <a href="#top" class="font-mono text-sm font-bold uppercase tracking-[0.28em] text-accent-400">MG.dev</a>
+        <div class="hidden items-center gap-7 text-sm font-medium text-slate-300 sm:flex">
+          <a class="transition hover:text-accent-400" href="#about">O mnie</a>
+          <a class="transition hover:text-accent-400" href="#skills">Umiejętności</a>
+          <a class="transition hover:text-accent-400" href="#projects">Projekty</a>
+          <a class="transition hover:text-accent-400" href="#contact">Kontakt</a>
+        </div>
+        <a
+          href="mailto:maciejgorski978@gmail.com"
+          class="rounded-full border border-accent-400/40 px-4 py-2 text-sm font-semibold text-accent-400 transition hover:border-accent-400 hover:bg-accent-400/10"
+        >Napisz</a>
+      </nav>
+    </header>
+
+    <main id="top" class="relative z-10">
+      <section class="mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:py-20">
+        <div>
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-accent-400/30 bg-accent-400/10 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.22em] text-accent-400">
+            <span class="h-2 w-2 rounded-full bg-accent-400 shadow-[0_0_14px_#38bdf8]"></span>
+            Dostępny na projekty IT
+          </p>
+          <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Maciej Górski
+          </h1>
+          <p class="mt-5 max-w-2xl text-xl font-semibold leading-relaxed text-slate-200 sm:text-2xl">
+            Student Informatyki, aspirujący Programista Python, Specjalista wsparcia IT lub Administrator sieci.
+          </p>
+          <p class="mt-6 max-w-2xl border-l-4 border-accent-400 pl-5 font-mono text-lg font-bold text-accent-400">
+            „Łączę kodowanie z architekturą sieci”
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="mailto:maciejgorski978@gmail.com"
+              class="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-500 px-6 py-3 font-bold text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-accent-400"
+            >
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              Skontaktuj się
+            </a>
+            <a
+              href="https://github.com/Gorski-Maciej"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-bold text-slate-100 transition hover:-translate-y-0.5 hover:border-accent-400/70 hover:bg-accent-400/10"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-3xl border border-white/10 bg-white/[0.06] p-5 shadow-2xl backdrop-blur-xl sm:p-6">
+          <div class="rounded-2xl border border-accent-400/20 bg-graphite-900/90 p-5 font-mono shadow-glow">
+            <div class="mb-5 flex items-center gap-2">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-300"></span>
+              <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+              <span class="ml-3 text-xs text-slate-400">profile.py</span>
+            </div>
+            <pre class="overflow-x-auto text-sm leading-7 text-slate-300"><code><span class="text-purple-300">class</span> <span class="text-accent-400">MaciejGorski</span>:
+    role = <span class="text-emerald-300">"Python / IT Support / Networks"</span>
+    focus = [<span class="text-emerald-300">"Linux"</span>, <span class="text-emerald-300">"TCP/IP"</span>, <span class="text-emerald-300">"IoT Security"</span>]
+    cert_goal = <span class="text-emerald-300">"Cisco CCNA"</span>
+
+    <span class="text-purple-300">def</span> <span class="text-accent-400">build_solutions</span>(self):
+        <span class="text-purple-300">return</span> <span class="text-emerald-300">"clean code + reliable networks"</span></code></pre>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
+        <div class="rounded-3xl border border-white/10 bg-graphite-900/70 p-7 shadow-2xl sm:p-10">
+          <p class="font-mono text-sm font-bold uppercase tracking-[0.25em] text-accent-400">O mnie</p>
+          <p class="mt-4 max-w-4xl text-lg leading-8 text-slate-300">
+            Student I roku informatyki z doświadczeniem projektowym w Pythonie oraz wiedzą z zakresu sieci komputerowych i systemów Linux. Łączę umiejętności programistyczne z pasją do bezpieczeństwa IT i IoT. Obecnie przygotowuję się do certyfikacji Cisco CCNA.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
+        <div class="mb-8 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-mono text-sm font-bold uppercase tracking-[0.25em] text-accent-400">Stack techniczny</p>
+            <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Kluczowe umiejętności</h2>
+          </div>
+          <p class="max-w-xl text-slate-400">Technologie łączące programowanie, administrację systemami i podstawy infrastruktury sieciowej.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <article class="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:-translate-y-1 hover:border-accent-400/60">
+            <i class="fa-brands fa-python text-3xl text-accent-400" aria-hidden="true"></i>
+            <h3 class="mt-4 font-bold text-white">Python</h3>
+            <p class="mt-2 text-sm text-slate-400">OOP i projekty aplikacyjne</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:-translate-y-1 hover:border-accent-400/60">
+            <i class="fa-brands fa-linux text-3xl text-accent-400" aria-hidden="true"></i>
+            <h3 class="mt-4 font-bold text-white">Linux</h3>
+            <p class="mt-2 text-sm text-slate-400">Skrypty shellowe i CLI</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:-translate-y-1 hover:border-accent-400/60">
+            <i class="fa-solid fa-network-wired text-3xl text-accent-400" aria-hidden="true"></i>
+            <h3 class="mt-4 font-bold text-white">Sieci</h3>
+            <p class="mt-2 text-sm text-slate-400">TCP/IP i administracja</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:-translate-y-1 hover:border-accent-400/60">
+            <i class="fa-brands fa-git-alt text-3xl text-accent-400" aria-hidden="true"></i>
+            <h3 class="mt-4 font-bold text-white">Git</h3>
+            <p class="mt-2 text-sm text-slate-400">Kontrola wersji</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-white/[0.05] p-5 transition hover:-translate-y-1 hover:border-accent-400/60">
+            <i class="fa-solid fa-database text-3xl text-accent-400" aria-hidden="true"></i>
+            <h3 class="mt-4 font-bold text-white">MySQL</h3>
+            <p class="mt-2 text-sm text-slate-400">Bazy danych SQL</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="mx-auto max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
+        <p class="font-mono text-sm font-bold uppercase tracking-[0.25em] text-accent-400">Portfolio projektów</p>
+        <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Wybrane realizacje</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          <article class="group rounded-3xl border border-white/10 bg-graphite-900/70 p-6 transition hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-glow">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-bold text-white">System budżetowy w Pythonie</h3>
+              <span class="rounded-full bg-accent-400/10 px-3 py-1 font-mono text-xs text-accent-400">OOP</span>
+            </div>
+            <p class="mt-4 text-slate-400">Aplikacja do analizy budżetu z logiką obiektową i wizualizacją danych.</p>
+          </article>
+          <article class="group rounded-3xl border border-white/10 bg-graphite-900/70 p-6 transition hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-glow">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-bold text-white">Własna implementacja HashTable</h3>
+              <span class="rounded-full bg-accent-400/10 px-3 py-1 font-mono text-xs text-accent-400">DSA</span>
+            </div>
+            <p class="mt-4 text-slate-400">Projekt pokazujący zrozumienie algorytmów, kolizji i struktur danych.</p>
+          </article>
+          <article class="group rounded-3xl border border-white/10 bg-graphite-900/70 p-6 transition hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-glow">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-bold text-white">Symulator Wież Hanoi</h3>
+              <span class="rounded-full bg-accent-400/10 px-3 py-1 font-mono text-xs text-accent-400">Rekurencja</span>
+            </div>
+            <p class="mt-4 text-slate-400">Interaktywny model problemu algorytmicznego oparty o podejście rekurencyjne.</p>
+          </article>
+          <article class="group rounded-3xl border border-white/10 bg-graphite-900/70 p-6 transition hover:-translate-y-1 hover:border-accent-400/60 hover:shadow-glow">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-bold text-white">System ustawień użytkownika CRUD</h3>
+              <span class="rounded-full bg-accent-400/10 px-3 py-1 font-mono text-xs text-accent-400">JSON</span>
+            </div>
+            <p class="mt-4 text-slate-400">Mechanizm tworzenia, odczytu, aktualizacji i zapisu ustawień z serializacją danych.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-6xl px-5 py-14 pb-20 sm:px-6 lg:px-8">
+        <div class="overflow-hidden rounded-3xl border border-accent-400/20 bg-gradient-to-br from-accent-500/20 via-graphite-900 to-graphite-950 p-7 shadow-glow sm:p-10">
+          <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p class="font-mono text-sm font-bold uppercase tracking-[0.25em] text-accent-400">Kontakt</p>
+              <h2 class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">Porozmawiajmy o współpracy</h2>
+              <p class="mt-4 max-w-2xl text-slate-300">Szukam możliwości rozwoju w obszarze programowania Python, wsparcia IT i administracji sieci.</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a href="mailto:maciejgorski978@gmail.com" class="inline-flex items-center justify-center gap-3 rounded-xl bg-white px-5 py-3 font-bold text-graphite-900 transition hover:-translate-y-0.5 hover:bg-slate-200">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                maciejgorski978@gmail.com
+              </a>
+              <a href="https://github.com/Gorski-Maciej" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 rounded-xl border border-white/15 bg-white/10 px-5 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:border-accent-400">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                Gorski-Maciej
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 rounded-xl border border-white/15 bg-white/10 px-5 py-3 font-bold text-white transition hover:-translate-y-0.5 hover:border-accent-400">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 border-t border-white/10 bg-graphite-950/80 px-5 py-6 text-center text-sm text-slate-500">
+      © 2026 Maciej Górski. Portfolio hostowane na GitHub Pages.
+    </footer>
+  </body>
+</html>
